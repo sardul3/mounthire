@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Host
+Host: https://mounthire.com
+
+# Sitemaps
+Sitemap: https://mounthire.com/sitemap.xml

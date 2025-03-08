@@ -27,6 +27,33 @@ body {
   }
 }
 
+/* Accordion animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.data-[state=open]:animate-accordion-down {
+  animation: accordion-down 300ms ease-out;
+}
+
+.data-[state=closed]:animate-accordion-up {
+  animation: accordion-up 300ms ease-out;
+}
+
 .bg-grid-white {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0V20M0 1H20' stroke='white' stroke-opacity='0.1'/%3E%3C/svg%3E");
 }

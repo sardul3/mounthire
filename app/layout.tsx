@@ -4,8 +4,13 @@ import Navbar from "@/components/Navbar"
 import "@/styles/globals.css"
 import type React from "react" // Import React
 import JsonLd from "@/components/JsonLd"
+import { reportWebVitals as reportWebVitalsUtil } from "@/lib/performance"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap', // Optimize font display
+  preload: true,
+})
 
 export const metadata = {
   title: "Mount Hire LLC - Expert IT Career Guidance",
@@ -64,6 +69,11 @@ export const metadata = {
   },
 }
 
+// Export a reportWebVitals function to measure performance
+export function reportWebVitals(metric: any) {
+  reportWebVitalsUtil(metric);
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -73,6 +83,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <JsonLd />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
       </head>
       <body className={inter.className}>
         <Navbar />
@@ -82,7 +94,5 @@ export default function RootLayout({
     </html>
   )
 }
-
-
 
 import './globals.css'

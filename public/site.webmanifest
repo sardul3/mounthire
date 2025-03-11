@@ -1,0 +1,14 @@
+{
+  "name": "Mount Hire LLC",
+  "short_name": "Mount Hire",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 

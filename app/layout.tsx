@@ -5,6 +5,8 @@ import "@/styles/globals.css"
 import type React from "react" // Import React
 import JsonLd from "@/components/JsonLd"
 import { reportWebVitals as reportWebVitalsUtil } from "@/lib/performance"
+import './globals.css'
+import ScrollToTop from "@/components/ScrollToTop"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -34,6 +36,15 @@ export const metadata = {
     telephone: true,
     address: true,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  manifest: '/site.webmanifest',
+  themeColor: '#2563eb',
   openGraph: {
     title: "Mount Hire LLC - Expert IT Career Guidance",
     description: "Boost your IT career with expert guidance in Software Engineering, Data Analysis, and Full-Stack Development.",
@@ -85,14 +96,15 @@ export default function RootLayout({
         <JsonLd />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
         <Navbar />
         {children}
+        <ScrollToTop />
         <Toaster />
       </body>
     </html>
   )
 }
-
-import './globals.css'

@@ -25,7 +25,7 @@ const faqData = [
       {
         question: "What technologies and skills will I learn?",
         answer:
-          "Our curriculum covers in-demand technologies including JavaScript, React, Node.js, Python, SQL, and cloud services. You'll also develop soft skills like problem-solving, communication, and teamwork that are essential for career success.",
+          "Our curriculum covers in-demand technologies including JavaScript, React, Java, Spring Boot, Python, SQL, and cloud services. You'll also develop soft skills like problem-solving, communication, and teamwork that are essential for career success.",
       },
       {
         question: "How is the program structured?",

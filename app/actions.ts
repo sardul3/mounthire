@@ -35,3 +35,23 @@ export async function sendEmail(formData: FormData) {
   }
 }
 
+export async function subscribeToNewsletter(email: string) {
+  if (!resend) {
+    console.error("Resend client is not initialized")
+    return { success: false, error: "Email service is not configured" }
+  }
+
+  try {
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "poudelsagar530@gmail.com",
+      subject: "New Newsletter Subscription",
+      text: `New subscriber: ${email} has subscribed to the newsletter.`,
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to send email:", error)
+    return { success: false, error: "Failed to send subscription confirmation" }
+  }
+}
+

@@ -2,12 +2,12 @@
 
 import { useCallback, useMemo, useState, useEffect, useRef } from "react"
 import { motion, LazyMotion, domAnimation, useAnimation } from "framer-motion"
-import { ArrowRight, Code, Database, Server } from "lucide-react"
+import { ArrowRight, Code, Database, Server, Shield as Security } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { throttle } from "@/lib/performance"
 
 const techIcons = [
-  { icon: Code, label: "Software Engineering" },
+  { icon: Security, label: "IAM Engineering" },
   { icon: Database, label: "Data Analysis" },
   { icon: Server, label: "Full-Stack Development" },
 ]
